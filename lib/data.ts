@@ -1,3 +1,4 @@
+import React from "react";
 import { LuGraduationCap } from "react-icons/lu";
 import bandsite from "@/public/bandsite.png";
 import skinventory from "@/public/skinventory.png";
