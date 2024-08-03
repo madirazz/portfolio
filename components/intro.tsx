@@ -4,6 +4,9 @@ import React from "react";
 import Image from "next/image";
 import profileImage from "../public/profile.png";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
 
 export default function Intro() {
   return (
@@ -53,6 +56,16 @@ export default function Intro() {
         for creating responsive and user-friendly applications. Let's build
         something amazing together!
       </motion.p>
+
+      <div>
+        <Link
+          href="#contact"
+          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+        >
+          Contact me here{" "}
+          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+        </Link>
+      </div>
     </section>
   );
 }
