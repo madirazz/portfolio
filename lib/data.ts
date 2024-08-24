@@ -33,12 +33,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Vancouver, BC",
+    title: "Software Quality Assurance Engineer",
+    location: "Five Elements Labs",
     description:
-      "I graduated from BrainStation",
+      "I led test automation initiatives by implementing Rainforest QA, achieving 30% faster testing cycles and a 20% reduction in post-release defects, designed and executed comprehensive automated test suites for web and mobile applications to expand test coverage by 50% and enhance product quality, and optimized testing processes through root cause analysis, Agile/Scrum collaboration, and continuous improvement.",
     icon: React.createElement(LuGraduationCap),
-    date: "2019",
+    date: "Mar 2023 - Sep 2023",
+  },
+  {
+    title: "Back End Developer",
+    location: "Workinvoice",
+    description:
+      "I developed and optimized server-side pagination for RESTful APIs in Clojure, using Multimethods/Hierarchies to reduce client-side load times by 90%, enhanced API performance with caching strategies and database query tuning, collaborated with front-end developers for seamless integration and data exchange, and wrote comprehensive unit and integration tests to ensure code quality and reliability.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Apr 2022 - Mar 2023",
+  },
+  {
+    title: "Embedded Software Engineer",
+    location: "FiberHome",
+    description:
+      "I developed and debugged control plane software using C and C++, focusing on optimizing functionality and system performance, specializing in advanced optical control plane modules like TNE, CSPF, OSPF, MPLS, and I3 to improve network efficiency and scalability, and designed test cases and procedures to enhance the reliability and performance of embedded system components.",
+    icon: React.createElement(LuGraduationCap),
+    date: "Sep 2017 - Jan 2020",
   },
 ] as const;
 
