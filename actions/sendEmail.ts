@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Resend } from "resend";
-import { validateString } from "@/lib/utils";
+import { getErrorMessage, validateString } from "@/lib/utils";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -20,12 +20,22 @@ export const sendEmail = async (formData: FormData) => {
       error: "Invalid message",
     };
   }
+  let data;
+  try {
+    data = await resend.emails.send({
+      from: "Contact Form <onboarding@resend.dev>",
+      to: "bytegrad@gmail.com",
+      subject: "Message from contact form",
+      reply_to: senderEmail,
+      text: message,
+    });
+  } catch (error: unknown) {
+    return {
+      error: getErrorMessage(error),
+    };
+  }
 
-  await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "razie.ahmadi93@gmail.com",
-    subject: "Message from contact form",
-    reply_to: senderEmail as string,
-    text: message as string,
-  });
+  return {
+    data,
+  };
 };
